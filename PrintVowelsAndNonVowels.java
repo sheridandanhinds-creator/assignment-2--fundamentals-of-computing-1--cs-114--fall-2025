@@ -4,39 +4,50 @@ public class PrintVowelsAndNonVowels {
   public static void main(String[] args) {
     System.out.println("Please enter phrase:");
     Scanner scan = new Scanner(System.in);
-    String phrase = scan.next(); 
+    String phrase = scan.nextLine(); 
     scan.close();
 
-    int vowel = 0;
-    int letter;
+    int aCounter = 0;
+    int eCounter = 0;
+    int iCounter = 0;
+    int oCounter = 0;
+    int uCounter = 0;
+    int consonantCounter = 0;
+    
+    //Sorts each letter to the correct counter
+    for(int x = 0; x < phrase.length(); x++){
+      switch(phrase.charAt(x))
+       { 
+       case 'a': 
+       aCounter++;
+       break; 
 
-    letter = (int);
-    boolean isVowel(){
-      return (letter == vowel);
-    }
+       case 'e':
+       eCounter++;
+       break;
 
-public String toString() {
-    String letterName;
+       case 'i':
+       iCounter++;
+       break;
 
-    if (letter == vowel) {
-      letterName = "a, e, i, o, u++";
-    } else {
-      letterName = "x++";
-    }
-    return letterName;
-  }
-}
+       case 'o':
+       oCounter++;
+       break;
 
-    int letter = ??;
-    int vowelCounter = 0;
-    //needs to account for a, e, i, o, and u individually (isVowel)
-    int letterCounter = 0;{
-      if(letter.isVowel){
-        //a, e, i, o, or u ++
+       case 'u':
+       uCounter++;
+       break;
+
+       case ' ':
+       break;
+
+       default:
+       consonantCounter++;
+       break;
+
       }
-      else{
-        otherLetter++;
-      }
     }
+    System.out.print("Here are your character counts: A = " + aCounter + " E = " + eCounter + " I = " + iCounter + " O = ");
+    System.out.print(oCounter + " U = " + uCounter + " Consonants = " + consonantCounter);
   }
 }

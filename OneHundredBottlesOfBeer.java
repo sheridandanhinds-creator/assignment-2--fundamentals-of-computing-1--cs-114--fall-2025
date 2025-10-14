@@ -1,6 +1,7 @@
 public class OneHundredBottlesOfBeer {
   public static void main(String[] args) {
     for(int x = 100; x > 0; x--){
+      //Maintains proper grammar for lyrics
       String bottleType;
       if(x == 1) {
         bottleType = "bottle";

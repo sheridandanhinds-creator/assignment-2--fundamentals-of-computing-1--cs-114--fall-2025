@@ -2,6 +2,7 @@ public class TheTwelveDaysOfChristmas {
   public static void main(String[] args) {
     String suffix = " ";
     for(int day = 1; day <= 12; day++){
+      //Assigns the proper suffix for the day
       switch (day)
       {
       case 1: 
@@ -20,6 +21,7 @@ public class TheTwelveDaysOfChristmas {
       suffix = "th";
     }
      System.out.println("On the " + day + suffix + " day of Christmas my true love gave to me");
+     //Prints out lyrics according to song based on day
      switch (day)
       {
       case 12:
